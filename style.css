@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Desconsidera os preenchimentos internos e mantem na largura que for definida*/
+}
+  
+body {
+    background-color: #09090A;
+    color: white;
+
+    height: 100vh; 
+}
+
+header {
+    display: flex; /*Disposição dos elementos dentro de uma caixa*/
+    align-items: center;
+    justify-content: space-between; /*Justifica colocando espaço entre os elementos*/
+    
+    padding: 48px; /*Preenchimento interno; com apenas um valor ele aplica para todos os lados*/
+
+    position: fixed; /*Manter 'habits' e 'registrar o meu dia' visivel sempre que rolar a tela para o lado*/
+    width: 100%;
+    background-color: #09090A;
+    
+    
+    
+    
+}
+
+#form-habits {
+    display: flex;
+
+    padding: 198px 48px 48px; /*Cima (para compensar o header, se nao ia ficar sobreposto, ja que quando coloca 'fixed' ele sobre um andar enquanto os outros permanecem no padrao)-laterais-baixo*/
+}
+
+.habits {
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.habit {
+    width: 64px;
+    height: 64px;
+
+    font-size: 32px;
+
+    display: flex;
+    align-items: center; /*Meio da altura*/
+    justify-content: center; /*Meio da largura, centraliza*/
+}
+
+/*Ponte antes por ser uma class*/
+.days {
+    display: flex;
+    gap: 48px; /*Espaço entre as caixas dos dias, colunas/linha*/
+    margin-left: 32px; 
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    gap: 24px; /*Espaço entre as caixas do dia, coluna*/
+}
+
+/*Pega a div dentro do day*/
+.day div {
+    margin-bottom: 8px;
+
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #A1A1AA;
+
+    text-align: center;
+}
+
+button {
+    border: 1px solid #8B5CF6;
+    border-radius: 8px;
+    margin: 24px; /*Margem externa da caixa*/
+    padding: 16px 24px; /*Margem interna da caixa; 16px = baixo e cima; 24px = esquerda e direita*/
+    background-color: transparent;
+    color: white;
+    
+    display: flex; /*Por padrão tem um display inline; deixa os elementos dentro do botão flexíveis*/
+    align-items: center; /*Só funciona se o flex funcionar*/
+    gap: 12px; /*Espaço entre os elementos*/
+
+    font-family: 'Inter';
+    font-weight: 600; /*Peso "grossura"*/
+    font-size: 16px;
+    line-height: 125%; /*Altura da linha*/
+}
+
+input {
+    appearance: none; /*Precisa tirar a aparencia pra aplicar o arredondamento, necessidade pra esse tipo de input*/
+    -webkit-appearance: none; /*Alguns navegadores precisam do prefixo se nao nao entendem a propriedade*/
+
+    width: 64px;
+    height: 64px;
+
+    border: 2px solid #27272A;
+    border-radius: 8px;
+
+    background-color: #18181B;
+}
+
+/*Pseudo-selector*/
+input:checked {
+    background: #8B5CF6;
+    border: 2px solid #A78BFA;
+}
+
+/*Responsividade em css, para o botao de 'registrar meu dia' ficar so o '+' quando reduzir o tamanho da tela*/
+@media (max-width: 570px) {
+    button div {
+        display: none;
+    }
+}

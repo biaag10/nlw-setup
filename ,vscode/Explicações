@@ -1,0 +1,77 @@
+# HTML
+
+Hypertext Markup Language
+
+- head = configuração do proprio documento
+<!--Comentário-->
+
+# 1. Tag
+
+- Elemento
+- h1/p
+<h1>TÍTULO</h1>
+<p>Fora do título (parágrafo)</p>
+- Existem tags que so possuem atributos para configurar, ex: link, img, input...
+- id (atributo identificador da tag "rg") nao pode repetir o nome, mas class sim
+
+# 2. Attributes
+
+- Configurações do elemento
+- a
+  *href = atribui a pagina (link) a uma palavra
+  *target = faz com que ao clicar a pagina seja aberta
+  <a href="https://app.rocketseat.com.br/event/nlw-setup/explorer/aula-1" target="_blank">Link (aula1)</a>
+
+# CSS
+
+Cascading Style Sheets = Folha de estilo em cascata
+/_Comentário_/
+
+# 1. Declarations
+
+- Propriedade -> Valor
+  display: grid; //define a tela total - faz o place-items funcionar
+  place-items: center; //coloca o elemento no centro da tela
+  height: 100vh; //define o tamanho do corpo, se n ele deixa o elemento no centro grudado no topo
+  - - atribui a propriedade a todos os elementos
+
+# 2. Cascata
+
+- 2 ou + declarações e a última é a mais relevante
+
+# 3. Especificidade
+
+- Cada seletor tem um peso e a soma dos pesos, será levada em conta para que determinada declaração seja mais especifica
+  #id = peso 100
+  .class = peso10
+  element = peso 1
+
+JAVA SCRIPT
+
+declara e atribui valor
+# let boasVindas ='Fala, Dev!";
+
+reatribuo valor
+# boasVindas = 'Fala, Dev! Tudo beleza?";
+
+constante nao pode mudar o valor
+const serHumano = true;
+serHumano = false; // erro
+
+# Comentário
+//comentario
+
+# Objeto
+const celular = {
+  cor: 'preto',
+  ligar: function() {
+    const mensagem = "Ligando"
+    alert(mensagem)
+  }
+}
+celular.ligar() = caixinha com a mensagem ligando
+
+# DOM - Dcocument Object Model
+elementos html se transformal em objeto js
+ex: document.body.style.backgrounColor = "White" ou document.querySelector("input").click()
+
